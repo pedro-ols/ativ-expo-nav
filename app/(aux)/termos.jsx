@@ -5,13 +5,6 @@ import { Link } from 'expo-router';
 export default function TermosDeUso() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
-      <ImageBackground source={
-          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCgGR6O85ZpXCcrIsMALC835njdk9OHvm7fc_EA_7Wo3GN7vk8oFGREv4nztnV55TcsYWez6ooTJIepp67cBNOkSuEM8DOmtfIC9mYUmqXJWQKuap5j5DIc90v9odccVi5KqzGDe9VcH0/s1600/CAMPINAS+FC+%2528CAMPINAS%2529+-+SP.PNG"
-        }
-        resizeMode="cover"
-        style={styles.image}
-      >
-
       <Text style={styles.title}>Termos de Uso</Text>
      
       <View style={styles.section}>
@@ -54,7 +47,6 @@ export default function TermosDeUso() {
           <Text style={styles.buttonText}>Voltar para Home</Text>
         </Pressable>
       </Link>
-</ImageBackground>
     </ScrollView>
   );
 }
@@ -70,12 +62,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 20,
-    color: '#333',
+    color: '#8B4513',
   },
   section: {
     marginBottom: 20,
     padding: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '#ADFF2F',
     borderRadius: 8,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
@@ -87,7 +79,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#3b5998',
+    color: '#8B4513',
   },
   sectionText: {
     fontSize: 16,
@@ -95,7 +87,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   button: {
-    backgroundColor: '#3b5998',
+    backgroundColor: '#8B4513',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 5,

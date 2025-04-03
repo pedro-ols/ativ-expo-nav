@@ -3,20 +3,16 @@ import {
   Text,
   StyleSheet,
   Pressable,
-  ImageBackground,
+  Image
 } from "react-native";
 import { Link } from "expo-router";
 
 export default function About() {
   return (
     <View style={styles.container}>
-      <ImageBackground
-        source={
-          "https://upload.wikimedia.org/wikipedia/commons/d/db/Portuguesa_de_Desportos.png"
-        }
-        resizeMode="cover"
-        style={styles.image}
-      >
+      <View style={styles.imageContainer}>
+          <Image source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT1GKzeyA9THE363YTL6xJDYqvCDMs2d1zlw&s"}} style={styles.image}></Image>
+      </View>
 
       <Text style={styles.title}>Bem-vindo a tela de sobre</Text>
       <Link href="/" asChild>
@@ -28,7 +24,6 @@ export default function About() {
         {" "}
         Nosso app conterá alguns termos quanto ao uso e a política da aplicação{" "}
       </Text>
-      </ImageBackground>
     </View>
   );
 }
@@ -36,7 +31,8 @@ export default function About() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-start",
+    gap: 10,
     alignItems: "center",
     backgroundColor: "#fff",
   },
@@ -48,7 +44,7 @@ const styles = StyleSheet.create({
     color: "#333",
   },
   button: {
-    backgroundColor: "#3b5998",
+    backgroundColor: "#ADFF2F",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 5,
@@ -56,7 +52,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   buttonText: {
-    color: "#fff",
+    color: "#8B4513",
     fontSize: 16,
     textAlign: "center",
     fontWeight: "bold",
@@ -72,11 +68,16 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginTop: 30,
+    backgroundColor: "white",
   },
-
-  image: {
-    flexGrow: 1,
+  imageContainer:{
+    width: '300px',
+    height: '250px',
     alignItems: "center",
     justifyContent: "center",
+  },
+  image: {
+    width: '90%',
+    height: '90%',
   },
 });

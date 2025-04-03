@@ -6,13 +6,6 @@ export default function Login() {
 
       
       <View style={styles.container}>
-        <ImageBackground source={
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Guarani_FC_%28E%29_-_SP.svg/1200px-Guarani_FC_%28E%29_-_SP.svg.png"
-        }
-        resizeMode="cover"
-        style={styles.image}
-      >
-
         
         <View style={styles.linkContainer}>
 
@@ -29,7 +22,8 @@ export default function Login() {
       <Pressable style={styles.button}>
         <Text style={styles.buttonText}>Entrar</Text>
       </Pressable>
-      </ImageBackground>
+    
+      
     </View>
   );
 }
@@ -39,7 +33,7 @@ const styles = StyleSheet.create({
     flex: 1,
     width: 400,
     padding: 20,
-    backgroundColor: "f5f5f5",
+    backgroundColor: "#f5f5f5",
     alignItems: "center",
   },
   title: {
@@ -47,7 +41,7 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     marginBottom: 20,
-    color: "#333",
+    color: "#8B4513",
   },
   linkContainer: {
     height: 100,
@@ -55,7 +49,7 @@ const styles = StyleSheet.create({
   section: {
     marginBottom: 20,
     padding: 15,
-    backgroundColor: "#fff",
+    backgroundColor: "#ADFF2F",
     borderRadius: 8,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -67,7 +61,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 10,
-    color: "#3b5998",
+    color: "#8B4513",
   },
   sectionText: {
     fontSize: 16,
@@ -75,7 +69,7 @@ const styles = StyleSheet.create({
     lineHeight: 24,
   },
   button: {
-    backgroundColor: "#3b5998",
+    backgroundColor: "#8B4513",
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 5,
@@ -90,19 +84,21 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     alignItems: "center",
-    backgroundColor: "#6495ED",
+    backgroundColor: "#ADFF2F",
     justifyContent: "center",
     height: 220,
     width: 300,
     borderRadius: 8,
   },
   input: {
-    backgroundColor: "#B0C4DE",
+    backgroundColor: "#ADFF2F",
     width: 200,
     height: 50,
     margin: 8,
     padding: 12,
     borderRadius: 5,
+    borderWidth: 3,
+    borderColor: "#8B4513",
   },
   
   image: {
