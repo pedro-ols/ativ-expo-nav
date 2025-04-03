@@ -1,23 +1,28 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Link, Pressable } from "react-native";
 
-export default function Sobre() {
+export default function About() {
   return (
     <View>
-      <Text>Esta é a tela Sobre!</Text>
+        <Text>Bem-vindo a tela de sobre</Text>
+      <Link href="/" asChild>
+        <Pressable style={styles.button}>
+          <Text style={styles.buttonText}>Ir para Tela Inicial</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#fff',
-    },
-    text: {
-        fontSize: 18,
-        fonyweight: 'bold',
-        color: '#333',
-    },
-})
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+  },
+  text: {
+    fontSize: 18,
+    fontweight: "bold",
+    color: "#333",
+  },
+});
