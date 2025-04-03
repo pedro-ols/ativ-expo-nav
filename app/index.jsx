@@ -4,10 +4,18 @@ import { Link } from 'expo-router';
 export default function Home() {
 
     return (
+
+      
         <View>
             <Link href="/sobre" asChild>
                 <Pressable style={styles.button}>
                     <Text style={styles.buttonText}>Ir para Sobre</Text>
+                </Pressable>    
+            </Link>
+
+            <Link href="/login" asChild>
+                <Pressable style={styles.button}>
+                    <Text style={styles.buttonText}>Ir para Login</Text>
                 </Pressable>    
             </Link>
 
@@ -17,7 +25,7 @@ export default function Home() {
                 </Pressable>    
             </Link>
 
-            <Link href="/(aux)/termos" asChild>Leia os Termos!</Link>
+            {/* <Link href="/(aux)/termos" asChild>Leia os Termos!</Link> */}
 
         </View>
     );
@@ -46,6 +54,7 @@ const styles = StyleSheet.create({
       shadowOpacity: 0.1,
       shadowRadius: 4,
       elevation: 3,
+      
     },
     sectionTitle: {
       fontSize: 18,
