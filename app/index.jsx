@@ -1,12 +1,12 @@
-import { View, Text, StyleSheet, Pressable } from 'react-native';
+import { View, Text, StyleSheet, Pressable, ImageBackground } from 'react-native';
 import { Link } from 'expo-router';
 
 export default function Home() {
 
     return (
 
-      
-        <View>
+        <View style={styles.container}>
+            <ImageBackground source={"https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Escudo_Oficial_Ponte_Preta.png/640px-Escudo_Oficial_Ponte_Preta.png"} resizeMode="cover" style={styles.image}>
             <Link href="/sobre" asChild>
                 <Pressable style={styles.button}>
                     <Text style={styles.buttonText}>Ir para Sobre</Text>
@@ -25,8 +25,7 @@ export default function Home() {
                 </Pressable>    
             </Link>
 
-            {/* <Link href="/(aux)/termos" asChild>Leia os Termos!</Link> */}
-
+        </ImageBackground>
         </View>
     );
 }
@@ -81,4 +80,9 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       fontWeight: 'bold',
     },
+    image: {
+        flexGrow: 1,
+        alignItems: "center",
+        justifyContent: "center",
+    }
   });

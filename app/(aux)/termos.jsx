@@ -1,10 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet, ScrollView, Pressable } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, Pressable, ImageBackground } from 'react-native';
 import { Link } from 'expo-router';
 
 export default function TermosDeUso() {
   return (
     <ScrollView contentContainerStyle={styles.container}>
+      <ImageBackground source={
+          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCgGR6O85ZpXCcrIsMALC835njdk9OHvm7fc_EA_7Wo3GN7vk8oFGREv4nztnV55TcsYWez6ooTJIepp67cBNOkSuEM8DOmtfIC9mYUmqXJWQKuap5j5DIc90v9odccVi5KqzGDe9VcH0/s1600/CAMPINAS+FC+%2528CAMPINAS%2529+-+SP.PNG"
+        }
+        resizeMode="cover"
+        style={styles.image}
+      >
+
       <Text style={styles.title}>Termos de Uso</Text>
      
       <View style={styles.section}>
@@ -47,6 +54,7 @@ export default function TermosDeUso() {
           <Text style={styles.buttonText}>Voltar para Home</Text>
         </Pressable>
       </Link>
+</ImageBackground>
     </ScrollView>
   );
 }

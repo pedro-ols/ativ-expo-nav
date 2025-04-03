@@ -1,9 +1,19 @@
-import { View, Text, StyleSheet, Pressable, TextInput } from "react-native";
+import { View, Text, StyleSheet, Pressable, TextInput, ImageBackground } from "react-native";
 import { Link } from "expo-router";
 
 export default function Login() {
   return (
-    <View style={styles.container}>
+
+      
+      <View style={styles.container}>
+        <ImageBackground source={
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Guarani_FC_%28E%29_-_SP.svg/1200px-Guarani_FC_%28E%29_-_SP.svg.png"
+        }
+        resizeMode="cover"
+        style={styles.image}
+      >
+
+        
         <View style={styles.linkContainer}>
 
       <Link href="/" asChild>
@@ -19,15 +29,17 @@ export default function Login() {
       <Pressable style={styles.button}>
         <Text style={styles.buttonText}>Entrar</Text>
       </Pressable>
+      </ImageBackground>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
+    width: 400,
     padding: 20,
-    backgroundColor: "#f5f5f5",
+    backgroundColor: "f5f5f5",
     alignItems: "center",
   },
   title: {
@@ -81,15 +93,22 @@ const styles = StyleSheet.create({
     backgroundColor: "#6495ED",
     justifyContent: "center",
     height: 220,
-    width: 400,
+    width: 300,
     borderRadius: 8,
   },
   input: {
     backgroundColor: "#B0C4DE",
-    width: 300,
+    width: 200,
     height: 50,
     margin: 8,
     padding: 12,
     borderRadius: 5,
   },
+  
+  image: {
+    flexGrow: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    width: 400,
+},
 });
